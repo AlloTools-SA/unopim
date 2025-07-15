@@ -3,7 +3,7 @@ services:
   unopim-web:
     build:
       context: .
-      dockerfile: dockerfiles/web.Dockerfile
+      dockerfile: docker/web/Dockerfile
     container_name: unopim-web
     volumes:
       - .:/var/www/html
@@ -28,7 +28,7 @@ services:
   unopim-q:
     build:
       context: .
-      dockerfile: dockerfiles/q.Dockerfile
+      dockerfile: docker/queue/Dockerfile
     container_name: unopim-q
     volumes:
       - .:/var/www/html
